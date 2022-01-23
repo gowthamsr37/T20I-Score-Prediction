@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPL Score Predictor</title>
+
+    </head>
+  <body>
+      <h1>T20I Batting Score Predictor 🏆</h1>
+      <div class = "register">  
+      <form id="register" action="{{ url_for('predict') }}"  method="post">
+          
+          <label> Bat_Team: </label><br>
+          <select name="Bat_Team" style="font-size:10pt;">
+                        <option value="none">--- Select a Batting team ---</option>
+                        <option value="AUS">AUS</option>
+                        <option value="BAN">BAN</option>
+                        <option value="ENG">ENG</option>
+                        <option value="IND">IND</option>
+                        <option value="NZ">NZ</option>
+                        <option value="PAK">PAK</option>
+                        <option value="SA">SA</option>
+                        <option value="SL">SL</option>
+			            <option value="WI">WI</option>
+                    </select><br><br>
+          <label> Bowl_Team: </label><br>
+          <select  name="Bowl_Team" style="font-size:10pt;">
+                        <option value="none">--- Select a Bowling team ---</option>
+                        <option value="AUS">AUS</option>
+                        <option value="BAN">BAN</option>
+                        <option value="ENG">ENG</option>
+                        <option value="IND">IND</option>
+                        <option value="NZ">NZ</option>
+                        <option value="PAK">PAK</option>
+                        <option value="SA">SA</option>
+                        <option value="SL">SL</option>
+			            <option value="WI">WI</option>
+                    </select><br><br>
+          
+            
+          <label> overs: </label><br>
+          <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) Eg. 7.2"><br><br>
+          <label> total_score: </label><br>
+          <input class="form-input" type="text" name="total_score" placeholder="Eg. 64"><br><br>
+          <label> total_wickets: </label><br>
+          <input class="form-input" type="text" name="total_wickets" placeholder="Eg. 4"><br><br>
+          <label> prev_runs_30: </label><br>
+          <input class="form-input" type="text" name="prev_runs_30" placeholder="Eg. 42"><br><br>
+          <label> prev_wickets_30: </label><br>
+          <input class="form-input" type="text" name="prev_wickets_30" placeholder="Eg. 3"><br><br>
+          <label> prev_30_dot_balls: </label><br>
+          <input class="form-input" type="text" name="prev_30_dot_balls" placeholder="Eg. 10"><br><br>
+          <label> prev_30_boundaries: </label><br>
+          <input class="form-input" type="text" name="prev_30_boundaries" placeholder="Eg. 3"><br><br>
+
+            
+          <input type="submit" class="myButton" value="Predict Score">
+                </form>
+      </div>
+      
+      
+      </body>
+</html>
